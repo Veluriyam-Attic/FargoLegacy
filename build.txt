@@ -1,0 +1,8 @@
+author = 虞悖
+version = 0.1.0.003
+displayName = [c/00ffff:Fargo:传承(Fargo:Legacy)]
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, lib\*, .git\*, Folders to Port\*, Fargowiltas.dll, Luminance.dll
+languageVersion = 6
+hideCode = false
+hideResources = false
+modReferences = Fargowiltas, Luminance,FargowiltasSouls

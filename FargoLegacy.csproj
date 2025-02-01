@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Import tModLoader mod properties -->
+	<Import Project="..\tModLoader.targets" />
+
+	<!-- General -->
+	<PropertyGroup>
+		
+	</PropertyGroup>
+	<ItemGroup>
+	  <Reference Include="CalamityMod">
+	    <HintPath>..\FargowiltasSoulsExtra\lib\CalamityMod.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Fargowiltas">
+	    <HintPath>..\FargowiltasSoulsExtra\lib\Fargowiltas.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FargowiltasCrossmod">
+	    <HintPath>..\FargowiltasSoulsExtra\lib\FargowiltasCrossmod.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FargowiltasSouls">
+	    <HintPath>..\FargowiltasSoulsExtra\lib\FargowiltasSouls.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Luminance">
+	    <HintPath>..\FargowiltasSoulsExtra\lib\Luminance.dll</HintPath>
+	  </Reference>
+	  <Reference Include="ThoriumMod">
+	    <HintPath>..\FargowiltasSoulsExtra\lib\ThoriumMod.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<!-- References -->
+
+</Project>
