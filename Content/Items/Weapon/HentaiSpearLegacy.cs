@@ -175,7 +175,6 @@ namespace FargoLegacy.Content.Items.Weapon
         {
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<HentaiSpear>())
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();
         }
     }

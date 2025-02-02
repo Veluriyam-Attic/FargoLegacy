@@ -21,7 +21,7 @@ using Terraria.ModLoader;
 
 namespace FargoLegacy.Content.Items.Accessories.Enchantments
 {
-    public class TungstenEnchantLegacy : BaseEnchant
+    public class TungstenEnchantLegacy : BaseEnchantLegacy
     {
 
         public override Color nameColor => new(176, 210, 178);

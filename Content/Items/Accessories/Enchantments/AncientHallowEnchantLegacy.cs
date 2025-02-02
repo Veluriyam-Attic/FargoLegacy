@@ -11,6 +11,7 @@ using FargowiltasSouls;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargoLegacy.Core.Toggler.Content;
 using FargoLegacy.Content.Projectiles.Minions;
+using FargowiltasSouls.Content.Projectiles.Minions;
 
 namespace FargoLegacy.Content.Items.Accessories.Enchantments
 {
@@ -35,10 +36,11 @@ namespace FargoLegacy.Content.Items.Accessories.Enchantments
 
         public static void AncientHallowEffect(Player player, Item item)
         {
-            FargoSoulsPlayerLegacy modPlayer = player.GetModPlayer<FargoSoulsPlayerLegacy>();
+            FargoSoulsPlayerLegacy modPlayerLegacy = player.GetModPlayer<FargoSoulsPlayerLegacy>();
+            FargoSoulsPlayer modPlayer = player.GetModPlayer<FargoSoulsPlayer>();
             bool minion = player.AddEffect<AncientHallowMinionLegacy>(item);
-            modPlayer.AncientHallowEnchantActive = true;
-            modPlayer.AddMinion(item, minion, ModContent.ProjectileType<HallowSwordLegacy>(), 0, 0);
+            modPlayerLegacy.AncientHallowEnchantActive = true;
+            modPlayer.AddMinion(item, minion, ModContent.ProjectileType<HallowSwordLegacy>(), 350, 2f);
 
                 const int focusRadius = 50;
 
@@ -145,18 +147,9 @@ namespace FargoLegacy.Content.Items.Accessories.Enchantments
         }
     }
 
-    public partial class FargoSoulsPlayerLegacy : FargoSoulsPlayer
+    public partial class FargoSoulsPlayerLegacy : ModPlayer
     {
         public bool AncientHallowEnchantActive;
-        public void AddMinion(Item item, bool toggle, int proj, int damage, float knockback)
-        {
-            if (Player.whoAmI != Main.myPlayer) return;
-            if (Player.ownedProjectileCounts[proj] < 1 && Player.whoAmI == Main.myPlayer && toggle)
-            {
-                Projectile pro = Main.projectile[Projectile.NewProjectile(Player.GetSource_Accessory(item), Player.Center.X, Player.Center.Y, 0f, -1f, proj, damage, knockback, Main.myPlayer)];
-                pro.netUpdate = true;
-            }
-        }
     }
     public class AncientHallowMinionLegacy : AccessoryEffect
     {
