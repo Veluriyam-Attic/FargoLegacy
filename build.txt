@@ -1,5 +1,5 @@
 author = 虞悖
-version = 0.1.0.004
+version = 0.1.0.005
 displayName = [c/00ffff:Fargo:传承(Fargo:Legacy)]
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, lib\*, .git\*, Folders to Port\*, Fargowiltas.dll, Luminance.dll
 languageVersion = 6

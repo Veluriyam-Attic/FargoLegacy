@@ -141,7 +141,7 @@ namespace FargoLegacy.Content.Projectiles.BossWeapons
             }
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             Player player = Main.player[Projectile.owner];
             player.itemAnimation = 0;

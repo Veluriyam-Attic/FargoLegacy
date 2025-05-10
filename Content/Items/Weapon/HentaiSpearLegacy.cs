@@ -174,7 +174,7 @@ namespace FargoLegacy.Content.Items.Weapon
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ModContent.ItemType<HentaiSpear>())
+                .AddIngredient(ModContent.ItemType<Penetrator>())
                 .Register();
         }
     }

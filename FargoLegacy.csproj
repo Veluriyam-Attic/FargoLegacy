@@ -8,6 +8,12 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Remove="Core\Global\GlobalItem.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="Core\Global\GlobalItem.cs" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Reference Include="CalamityMod">
 	    <HintPath>..\FargowiltasSoulsExtra\lib\CalamityMod.dll</HintPath>
 	  </Reference>

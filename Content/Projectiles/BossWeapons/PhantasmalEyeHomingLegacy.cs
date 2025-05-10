@@ -98,7 +98,7 @@ namespace FargoLegacy.Content.Projectiles.BossWeapons
             Projectile.timeLeft = 0;
         }
 
-        public override void Kill(int timeleft)
+        public override void OnKill(int timeleft)
         {
             //Terraria.Audio.SoundEngine.PlaySound(SoundID.Zombie1,(int)Projectile.position.X, (int)Projectile.position.Y, 103, 1f, 0);
             Projectile.position = Projectile.Center;

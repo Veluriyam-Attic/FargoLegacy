@@ -90,7 +90,7 @@ namespace FargoLegacy.Content.Projectiles
             Projectile.timeLeft = 0;
         }
 
-        public override void Kill(int timeleft)
+        public override void OnKill(int timeleft)
         {
             Terraria.Audio.SoundEngine.PlaySound(SoundID.NPCDeath1, Projectile.Center);
             Projectile.position = Projectile.Center;

@@ -148,7 +148,7 @@ namespace FargoLegacy.Content.Projectiles.BossWeapons
             return Math.Sqrt(dX * dX + dY * dY) <= Projectile.width / 2;
         }
 
-        public override void Kill(int timeLeft) //self reuse so you dont need to hold up always while autofiring
+        public override void OnKill(int timeLeft) //self reuse so you dont need to hold up always while autofiring
         {
             if (Projectile.owner == Main.myPlayer && Main.player[Projectile.owner].controlUseTile && Main.player[Projectile.owner].altFunctionUse == 2
                 && !(Main.player[Projectile.owner].controlUp && Main.player[Projectile.owner].controlDown)
